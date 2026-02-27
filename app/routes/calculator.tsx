@@ -25,11 +25,11 @@ const Calculator = () => {
             </div>
             <div className='flex justify-around'>
              <div className='grid grid-cols-3 gap-5 mb-5'>
-              <button onClick={()=>{setvalue1(0) ; setvalue2(0);setoperator("") ;setvalue(0)}} className='bg-gray-300 px-3 shadow-md cursor-pointer hover:bg-gray-200'>C</button>
+              <button onClick={()=>{setvalue1(0) ; setvalue2(0);setoperator("") ;setvalue(0); setIsfirst(true)}} className='bg-gray-300 px-3 shadow-md cursor-pointer hover:bg-gray-200'>C</button>
               {numbers.map((num)=>(
                 <button 
                 key={num}
-                onClick={()=>{if (Isfirst){setvalue1(num)}else{ setvalue2(num)}}}
+                onClick={()=>{if (Isfirst){setvalue1(value1*10 + num)}else{ setvalue2(value2*10 +num)}}}
                 className='bg-gray-500  px-3 shadow-md cursor-pointer hover:shadow-gray-600 '
                 >{num}</button>
               ))}
