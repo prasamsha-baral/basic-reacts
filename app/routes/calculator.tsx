@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const Calculator = () => {
 
-  const numbers=[1,2,3,4,5,6,7,8,9]
+  const numbers=[1,2,3,4,5,6,7,8,9,0]
   const operators=["+","-","*","/"]
 
   const [value1, setvalue1] = useState(0)

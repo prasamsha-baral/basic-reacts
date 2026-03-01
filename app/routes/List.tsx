@@ -24,8 +24,8 @@ const List = () => {
     <>
         {/* <p>To do Lists</p> */}
         <div className='bg-pink-50 h-screen flex justify-center items-center'>
-          <div className='bg-pink-200 w-90  text-center p-5 border-pink-300 border-8 shadow-md'>
-             <h2 className='underline p-2 text-gray-800 text-xl font-bold'>To do Lists</h2>
+          <div className='bg-pink-200 w-120  text-center p-5 border-pink-300 border-8 shadow-md'>
+             <h2 className='underline p-2 text-gray-800 text-xl font-bold'>To do Listsss</h2>
               <div className='flex justify-center gap-2 pt-2'>
                 
                   <input type="text"className='text-center font-bold text-pink-400' 
