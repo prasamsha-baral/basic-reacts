@@ -1,23 +1,25 @@
 import React, { useState } from 'react'
 
+
+
 const List = () => {
   
  
-  const [task, settask] = useState([])
+  const [task, settask] = useState([""])
   const [input, setinput] = useState("")
   // const [isEmpty, setisEmpty] = useState(true)
 
 
   const add=()=>{
     if(input.trim()=="")return
-    settask([...task,{text:input , done:false}])
+    settask([...task,input])
     setinput("")
   }
-   const toggleCheck = (index) => {
-    const newTasks = [...task]
-    newTasks[index].done = !newTasks[index].done
-    settask(newTasks)
-  }
+  //  const toggleCheck = (index) => {
+  //   const newTasks = [...task]
+  //   newTasks[index].done = !newTasks[index].done
+  //   settask(newTasks)
+  // }
 
   
   return (
@@ -39,10 +41,10 @@ const List = () => {
             
                {task.map((T,index)=>(
                   <div className=' pt-2  text-gray-800 px-9 flex  gap-5'  key={index}>
-                    <input type="checkbox" className='bg-white ' checked={task.done}
-            onChange={()=>toggleCheck(index)} />
-
-                <p className='pb-2 font-semibold'>{T.text}</p>
+                    {/* <input type="checkbox" className='bg-white ' checked={task.done}
+            onChange={()=>toggleCheck(index)} /> */}
+              
+                <p className='pb-2 font-semibold'>{T}</p>
 
                 </div>
                ))
