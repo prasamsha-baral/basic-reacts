@@ -5,16 +5,24 @@ import React, { useState } from 'react'
 const List = () => {
   
  
-  const [task, settask] = useState([""])
+  const [task, settask] = useState([])
   const [input, setinput] = useState("")
   // const [isEmpty, setisEmpty] = useState(true)
 
 
   const add=()=>{
-    if(input.trim()=="")return
+    if(input.trim()!==""){
     settask([...task,input])
     setinput("")
+    }
   }
+
+  const cut=(index)=>{
+    const updated= task.filter((_,i)=>i!==(index))
+    settask(updated)
+  }
+
+  
   //  const toggleCheck = (index) => {
   //   const newTasks = [...task]
   //   newTasks[index].done = !newTasks[index].done
@@ -38,13 +46,20 @@ const List = () => {
                   <button className='bg-pink-300 px-2 rounded cursor-pointer' onClick={add}>set</button>
                   
               </div>
+
+              
             
                {task.map((T,index)=>(
-                  <div className=' pt-2  text-gray-800 px-9 flex  gap-5'  key={index}>
-                    {/* <input type="checkbox" className='bg-white ' checked={task.done}
-            onChange={()=>toggleCheck(index)} /> */}
+                  <div className=' pt-2  text-gray-800 pl-9 flex justify-between  gap-5'  key={index}>
+                    <div className='pt-2  text-gray-800 pl-10 flex  gap-5'>
+                    <input type="checkbox" className='bg-white ' />
               
-                <p className='pb-2 font-semibold'>{T}</p>
+                <p className=' font-semibold'>{T}</p>
+                </div>
+
+                <div className='flex pr-5'>
+                <button onClick={()=>cut(index)} className='text-xl  cursor-pointer text-red-500'>x</button>
+                </div>
 
                 </div>
                ))

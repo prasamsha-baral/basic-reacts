@@ -8,7 +8,3 @@ export default [index("routes/home.tsx"),
 ] satisfies RouteConfig;
 
 
-// export default [index("routes/login.jsx"),
-//     route("about","routes/about.jsx"),
-//     route("home","routes/home.jsx")
-// ] satisfies RouteConfig;
