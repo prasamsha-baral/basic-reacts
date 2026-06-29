@@ -23,18 +23,13 @@ const List = () => {
   }
 
   
-  //  const toggleCheck = (index) => {
-  //   const newTasks = [...task]
-  //   newTasks[index].done = !newTasks[index].done
-  //   settask(newTasks)
-  // }
-
+  
   
   return (
     <>
         {/* <p>To do Lists</p> */}
         <div className='bg-pink-50 h-screen flex justify-center items-center'>
-          <div className='bg-pink-200 w-120  text-center p-5 border-pink-300 border-8 shadow-md'>
+          <div className='bg-pink-100 w-120  text-center p-5 border-pink-300 border-8 shadow-md'>
              <h2 className='underline p-2 text-gray-800 text-xl font-bold'>To do Listsss</h2>
               <div className='flex justify-center gap-2 pt-2'>
                 
