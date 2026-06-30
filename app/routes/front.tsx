@@ -1,10 +1,21 @@
 import React from 'react'
 import v1 from "../welcome/v1.png"
 import girl from "../welcome/girl2.png"
+import NavBtn from '~/components/NavBtn'
+
 
 const front = () => {
   return (
     <>
+    {/* <div className= bg-amber-50"> 
+
+      <nav className="flex">
+        
+       
+          <NavBtn text="" path=""/>
+      </nav>
+   
+  </div>  */}
     <div className='bg-[#E7E0D5] min-h-screen flex justify-center items-center pb-23'>
         <div className=' mx-auto w-[90vw] 
          sm:w-[85vw] 
@@ -21,17 +32,18 @@ const front = () => {
         <div className=' flex flex-col sm:flex-row justify-center sm:gap-2 p-4 md:gap-1 lg:gap-6 lg:p-5'>
             <button className='border-black border-2 text-xs p-1 text-black rounded-2xl cursor-pointer shadow-md hover:shadow-gray-400'>Individual</button>
             
-            <p className='navItem'>Business</p>
+           <NavBtn text="About" path="/about"/>
         </div>
         <div className='flex flex-col sm:flex-row justify-center sm:gap-1 p-4  md:gap-1  lg:gap-5 lg:p-4 '>
           
-           <p className='navItem'>Features</p>
-           <p className='navItem'>Privacy</p>
-           <p className='navItem'>Helpcenter</p>
+           <NavBtn text="Calculator" path="/calculator"/>
+       <NavBtn text="Counter" path="/counter"/>
+        <NavBtn text="list" path="/todo"/>
+        
         </div>
         <div className='flex flex-col pt-4 sm:p-4  md:flex-row justify-center sm:gap-1 p-3 md:gap-2 lg:gap-6 lg:p-5'>
             
-             <p className='navItem'>Web</p>
+          
              <button className='btn'>Download</button>
               </div>
     </nav>
