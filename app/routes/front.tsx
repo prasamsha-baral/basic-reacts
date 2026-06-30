@@ -2,9 +2,11 @@ import React from 'react'
 import v1 from "../welcome/v1.png"
 import girl from "../welcome/girl2.png"
 import NavBtn from '~/components/NavBtn'
+import { useNavigate } from 'react-router'
 
 
 const front = () => {
+  const navigate= useNavigate();
   return (
     <>
     {/* <div className= bg-amber-50"> 
@@ -32,14 +34,14 @@ const front = () => {
         <div className=' flex flex-col sm:flex-row justify-center sm:gap-2 p-4 md:gap-1 lg:gap-6 lg:p-5'>
             <button className='border-black border-2 text-xs p-1 text-black rounded-2xl cursor-pointer shadow-md hover:shadow-gray-400'>Individual</button>
             
+            
            <NavBtn text="About" path="/about"/>
         </div>
         <div className='flex flex-col sm:flex-row justify-center sm:gap-1 p-4  md:gap-1  lg:gap-5 lg:p-4 '>
           
-           <NavBtn text="Calculator" path="/calculator"/>
-       <NavBtn text="Counter" path="/counter"/>
-        <NavBtn text="list" path="/todo"/>
-        
+          <p className='navItem'>Contact</p>
+           <p className='navItem'>Skills</p>
+            <p className='navItem'>Info</p>
         </div>
         <div className='flex flex-col pt-4 sm:p-4  md:flex-row justify-center sm:gap-1 p-3 md:gap-2 lg:gap-6 lg:p-5'>
             
@@ -52,16 +54,19 @@ const front = () => {
 
     <div className='flex-1 px-4 sm:px-6 md:px-10'>
 
-    <h1 className=' text-black underline text-xl sm:text-2xl md:text-3xl lg:4xl px-1.5 font-serif'>Designed for <br />
-        Productivity in <br />
-         Everyday Conversations</h1>
+    <h1 className=' text-black underline text-xl sm:text-2xl md:text-3xl lg:4xl px-1.5 font-serif'> Turning <br />
+        Ideas Into
+ <br />
+        Interactive Projects</h1>
             <br />
-         <h3 className='text-black font-mono text-lg sm:text-base md:text-lg'>Stay Connected, Stay Texty.</h3>
+         <h3 className='text-black font-mono text-lg sm:text-base md:text-lg'>Building Web Experiences, Aspiringg.</h3>
 
 
         <div className=' gap-4 mt-4'>
         
-         <button className='btn'>Get Started</button>
+         <button className='btn' 
+         onClick={()=>navigate("/about")}
+         >Get Started</button>
          <button className='border-black border text-black text-xs mx-3 p-1 '>Try chat for use <select ></select> </button>
          </div>
         </div>

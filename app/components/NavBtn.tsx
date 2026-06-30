@@ -8,7 +8,7 @@ type NavBtnProps={
 const NavBtn = ({text,path}:NavBtnProps) => {
     const navigate =useNavigate()
   return (
-    <button className=" cursor-pointer font-sans text-black text-xs px-2 pt-1.5 "
+    <button className=" cursor-pointer underline  border-r-2 font-sans text-black text-xs px-2 shadow-md hover:shadow-2xl "
         onClick={()=>navigate(path)}>{text}</button>
   )
 }
